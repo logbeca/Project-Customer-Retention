@@ -1,0 +1,8 @@
+pydantic
+psycopg2
+uvicorn
+SQLalchemy
+email-validator
+psycopg2-binary
+faker
+Faker
