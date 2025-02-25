@@ -3,7 +3,7 @@ from datetime import datetime, date
 from typing import List, Optional, Dict
 
 class AdCost(BaseModel):
-    date_ad: date
+    date_ad: datetime
     channel: str
     ad_cost: float
     impressions: int

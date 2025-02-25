@@ -14,10 +14,10 @@ coupon = ["FUN2025", "BRAND10", "INFLUENCER20"]
 payment_method = ["credit_card", "paypal", "pix"]
 
 def generate_visits_data():
-    for i in range(1000):
+    for i in range(100):
         user_id = fake.uuid4()
         pages = ["/home", "/products", "/checkout", "/blog", "/cart", f"/products/{random.randint(1,1000)}", "/wishlist", "/login","/orders"]
-        date_time = date_time = fake.date_time_between(start_date="-30d", end_date="now")
+        date_time = fake.date_time_between(start_date="-30d", end_date="now")
         session_id = fake.uuid4()
         device = random.choice(devices)
         location = f"{fake.city()},{fake.country()}"
@@ -64,7 +64,7 @@ def generate_adcost_data():
     data_ads = []
 
     for i in range(40):
-        date_ad =   fake.date_between(start_date="-30d", end_date="today")
+        date_ad =   (fake.date_time_between(start_date="-30d", end_date="now"))
         channel = random.choice(ad_channels)
         ad_cost = round(random.uniform(20,700), 2)
         impressions = random.randint(5000,50000)
