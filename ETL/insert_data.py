@@ -13,12 +13,12 @@ def insert_data(adcost_data, visits_data):
         for ad in adcost_data:
             validated_ad = AdCost(**ad)  # Validate data using Pydantic
             ad_record = AdCostModel(
-                date=validated_ad.date_ad,
+                date_ad=validated_ad.date_ad,
                 channel=validated_ad.channel,
                 ad_cost=validated_ad.ad_cost,
                 impressions=validated_ad.impressions,
                 clicks=validated_ad.clicks,
-                conversions=validated_ad.conversion
+                conversions=validated_ad.conversions
             )
             db.add(ad_record)
 

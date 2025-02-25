@@ -17,7 +17,7 @@ def generate_visits_data():
     for i in range(1000):
         user_id = fake.uuid4()
         pages = ["/home", "/products", "/checkout", "/blog", "/cart", f"/products/{random.randint(1,1000)}", "/wishlist", "/login","/orders"]
-        date_time = fake.date_time_between(start_date="-30d", end_date="now")
+        date_time = date_time = fake.date_time_between(start_date="-30d", end_date="now")
         session_id = fake.uuid4()
         device = random.choice(devices)
         location = f"{fake.city()},{fake.country()}"
@@ -64,14 +64,14 @@ def generate_adcost_data():
     data_ads = []
 
     for i in range(40):
-        date =   (fake.date_between(start_date="-30d", end_date="today"), datetime.min.time())
+        date_ad =   fake.date_between(start_date="-30d", end_date="today")
         channel = random.choice(ad_channels)
         ad_cost = round(random.uniform(20,700), 2)
         impressions = random.randint(5000,50000)
         clicks = random.randint(100, impressions)
         conversions = random.randint(10, clicks)
         data_ads.append({
-            "date_ad": date , 
+            "date_ad": date_ad , 
             "channel": channel ,
             "ad_cost": ad_cost,
             "impressions": impressions ,

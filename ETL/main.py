@@ -1,6 +1,6 @@
 from generate_data import generate_visits_data
 from generate_data import generate_adcost_data
-from database import SessionLocal, engine
+from database import  engine
 import models
 from models import Base
 from insert_data import insert_data

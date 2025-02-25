@@ -5,7 +5,7 @@ from database import Base
 class AdCost(Base):
     __tablename__ = "adcost"
     id = Column(Integer, primary_key=True, index=True)
-    date = Column(Date, index=True)
+    date_ad = Column(Date, index=True)
     channel = Column(String, index=True)
     ad_cost = Column(Float, index=True)
     impressions = Column(Integer, index=True)
